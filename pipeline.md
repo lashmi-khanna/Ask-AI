@@ -15,7 +15,7 @@ The production system runs across 4 sequential stages:
 <br>
 
 ## Stage 1: Text Preprocessing & Chunking
-**Core Objective:** Cleans background noise from raw PDF text and partitions massive documents into small, manageable text sections[cite: 2].
+**Core Objective:** Cleans background noise from raw PDF text and partitions massive documents into small, manageable text sections.
 
 **Key Operations:**
 * **Lowercasing:** Standardizes text so variations like "PPO", "Ppo", and "ppo" map to the exact same word.
@@ -42,7 +42,9 @@ The production system runs across 4 sequential stages:
 **Key Operations:**
 * **Cosine Similarity Metric:** Uses cosine formula or inbuilt method to find angle between two vectors, to find similarity between them.
 
-> **Cosine Similarity = (A • B) / (|A| * |B|)**
+```text
+Cosine Similarity = (A · B) / (|A| * |B|)
+```
 
 * **Result is between -1 and 1:**
   * **1.0** → identical direction (same meaning)
@@ -64,16 +66,20 @@ The production system runs across 4 sequential stages:
   3. **The Value Extraction:** The model multiplies that 90% weight against the Value vector of "algorithm". This floods the vector for the word "it" with the semantic traits and meaning of "algorithm".
 * **Why is it called "Multi-Head"?** The model runs this (Q, K, V) calculation multiple times in parallel (usually 8 to 16 "heads"). One head focuses on grammar, another on pronoun tracking and another on academic concepts. Localized Feed-Forward Networks (FFN) then isolate and process each token's updated context.
 * **Logits & Softmax:** The top layer generates raw popularity votes (Logits) to every word it knows. The Softmax function turns those scores into clean percentages that add up to 100%. Mathematically, it does two things to the logits:
-  * **It eliminates negatives:** It raises Euler's number to the power of each logit elogit. This forces every negative score to become a positive decimal, and it heavily amplifies the highest scores to widen the gap between the smart choices and the bad choices.
+
+  * **It eliminates negatives:** It raises Euler's number to the power of each logit. This forces every negative score to become a positive decimal, and it heavily amplifies the highest scores to widen the gap between the smart choices and the bad choices.
+
   * **It normalizes them:** It adds up all those new positive scores and divides each individual score by that total sum.
 
 ```text
 Logits from Output Layer          Vocabulary Softmax
-  ["dataset":  12.4]              ["dataset": 89.1%](Highestprobability)[cite: 2]
-  ["code":      8.1]   ───►       ["code":    10.8%][cite: 2]
-  ["banana":   -4.5]              ["banana":   0.01%][cite: 2]
+  ["dataset":  12.4]              ["dataset": 89.1%] (Highest probability)
+  ["code":      8.1]   ───►       ["code":    10.8%]
+  ["banana":   -4.5]              ["banana":   0.01%]
                                  ──────────────────
-                                 Total Sum = 100%[cite: 2]
+                                 Total Sum = 100%
+ ```
+
   * **Zero Temperature (0.0):** Turns off all AI creativity. The model must strictly choose the word with the highest percentage, which completely stops the AI from making up fake facts (hallucinations).
   * **Word-by-Word Loop:** Writes out the answer left-to-right, predicting one word at a time and looking back at what it just wrote until the sentence is complete.
 
