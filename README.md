@@ -24,7 +24,7 @@ Natural Language Processing (NLP) serves as the data translation layer of the AS
 
 The production system runs across 4 sequential stages:
 
-![Core Architecture Flowchart](core_architecture.jpg)
+![Core Architecture Flowchart](core_architecture.jpeg)
 
 ### Stage 1: Text Preprocessing & Chunking
 * **Core Objective:** Cleans background noise from raw PDF text and partitions massive documents into small, manageable text sections.
@@ -81,8 +81,8 @@ The production system runs across 4 sequential stages:
   * **Zero Temperature (0.0):** Turns off all AI creativity. The model must strictly choose the word with the highest percentage, which completely stops the AI from making up fake facts (hallucinations).
   * **Word-by-Word Loop:** Writes out the answer left-to-right, predicting one word at a time and looking back at what it just wrote until the sentence is complete.
 
-![LLM Inference Workflow](inference_workflow.jpg)
+![LLM Inference Workflow](inference_workflow.jpeg)
 
 ### NLP WORKFLOW:
 
-![Full NLP Offline and Online Workflow](full_workflow.jpg)
+![Full NLP Offline and Online Workflow](full_workflow.jpeg)
