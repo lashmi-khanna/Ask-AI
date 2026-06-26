@@ -51,7 +51,7 @@ nav_order: 1
 
 <div class="mentor-card">
   <h3>Krish Jain</h3>
-  <p class="mentor-roll">Roll No: B25EE1097</p>
+  <p class="mentor-roll">Roll No: B24EE1097</p>
 </div>
 
 ## Team Members
