@@ -80,17 +80,17 @@ The pipeline runs across 7 sequential mathematical stages:
             AttentionScore(A, B) = q_A · k_B
 
 
-* **Attention Pattern Matrix: We map these scores across all pairs of words into an N*N grid, then use a row-by-row softmax to turn the raw scores into clean percentages that add up to 1. This tells us exactly what percentage of focus word A should place on word B.
-* **Updating Representations: We multiply those attention weight percentages (a[i,j]) by the value vectors (v) to compute a context-blended average vector for each word slot, creating our attention head matrix H(s):
+* **Attention Pattern Matrix:**  We map these scores across all pairs of words into an N*N grid, then use a row-by-row softmax to turn the raw scores into clean percentages that add up to 1. This tells us exactly what percentage of focus word A should place on word B.
+* **Updating Representations:**  We multiply those attention weight percentages (a[i,j]) by the value vectors (v) to compute a context-blended average vector for each word slot, creating our attention head matrix H(s):
 
-* **new_representation(word_i) = Σ a[i,j] × value(word_j) 
+      new_representation(word_i) = Σ a[i,j] × value(word_j) 
 
-* **Residual Bypass Connection: We then take this fresh context matrix H(s) and add it straight back to our original input matrix U(s):
+* **Residual Bypass Connection:**  We then take this fresh context matrix H(s) and add it straight back to our original input matrix U(s):
 
-* **Y(s) = U(s) + H(s)
+      Y(s) = U(s) + H(s)
 
 
-* **In Simple Words: This acts as an architectural shortcut. By adding the new context back to the original values, gradients can roll backwards smoothly through deep layers during training without shrinking to zero.
+* **In Simple Words:** This acts as an architectural shortcut. By adding the new context back to the original values, gradients can roll backwards smoothly through deep layers during training without shrinking to zero.
 
 ![Attention Routing Loop](attention.png)
 
