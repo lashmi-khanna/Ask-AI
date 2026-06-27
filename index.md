@@ -66,12 +66,16 @@ nav_order: 1
     <p class="roll-no">Roll No: B25CM1022</p>
   </div>
   <div class="team-card">
-    <h4>Madhav Parmar</h4>
-    <p class="roll-no">Roll No: B25CS1034</p>
+    <h4>Akshita Sharma</h4>
+    <p class="roll-no">Roll No: B25CM1005</p>
   </div>
   <div class="team-card">
     <h4>Parth Suryawanshi</h4>
     <p class="roll-no">Roll No: B25ME1056</p>
+  </div>
+  <div class="team-card">
+    <h4>Madhav Parmar</h4>
+    <p class="roll-no">Roll No: B25CS1034</p>
   </div>
   <div class="team-card">
     <h4>Amisha Nainwani</h4>
@@ -84,9 +88,5 @@ nav_order: 1
   <div class="team-card">
     <h4>Rakshit Khatri</h4>
     <p class="roll-no">Roll No: B25MT1034</p>
-  </div>
-  <div class="team-card">
-    <h4>Akshita Sharma</h4>
-    <p class="roll-no">Roll No: B25CM1005</p>
   </div>
 </div>
