@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Git & GitHub Pipeline
+title: Git & GitHub 
 nav_order: 4
 ---
 
@@ -47,7 +47,7 @@ When working locally on your machine, Git splits your workspace into three disti
 * **Staging Area (Index):** Think of this as a preparation zone or a packing table. Before saving a permanent checkpoint, you place specific changes here to tell Git, "I only want to bundle these exact files into my next save-state."
 * **Local Repository:** Once you lock your changes in, they move into this hidden local database. It safely stores your entire historical timeline of checkpoints and metadata directly on your machine.
 
-![Git Architecture Pipeline][git workflow.png]
+![Git Architecture Pipeline](git workflow.png)
 
 ### 2.4 Cryptographic Security via Hashing Algorithms
 Git ensures total data integrity and prevents file tampering by using a Secure Hashing Algorithm (SHA).
@@ -66,7 +66,7 @@ Git ensures total data integrity and prevents file tampering by using a Secure H
 # Section 3: Bringing Branches Together (Merging vs. Rebasing)
 When team members work on different parallel branches, those branches eventually need to be brought back together. Git provides two distinct strategies to accomplish this:
 
-![Merging vs Rebasing Diagram](mergingvsrebasing.png)
+
 
 <br>
 
@@ -86,7 +86,8 @@ Using the exact same scenario, if you choose to Rebase, Git does a bit of clever
 
 * **Pros:** It completely erases the evidence that you ever worked on a separate side branch. Your project timeline looks like a perfectly straight, beautiful, easy-to-read line.
 * **Cons:** It technically rewrites history. Because it shifts the starting base of your checkpoints to make it look like they happened later than they actually did, it can cause sync confusion if you rewrite history on a branch that other teammates are actively trying to share.
-
+ 
+![Merging vs Rebasing Diagram](mergingvsrebasing.png)
 ---
 
 # Section 4: Modern Deployment, Containerization, and Orchestration
@@ -103,7 +104,7 @@ A classic frustration in software development happens when code works perfectly 
 
 Docker solves this environmental mismatch by packaging your application along with every single dependency, file, binary, and setting it needs to run. This self-contained bundle is called a container.
 
-![Docker Architecture](docker.png)
+
 
 ### Key Benefits of Docker:
 * **Portability & Consistency:** A Docker container runs identically whether it is on a local developer laptop, a cloud instance, or an on-premise server. Build it once, run it anywhere.
@@ -113,6 +114,7 @@ Docker solves this environmental mismatch by packaging your application along wi
 * **Docker Client:** The primary text interface or terminal tool that developers use to give commands to the system.
 * **Docker Host:** A background service (daemon) running on the machine that listens for commands and actively manages your containers, networks, and storage.
 * **Docker Registry:** A centralized storage unit for sharing container setups. Docker Hub is a massive public registry where developers worldwide download and share pre-configured base environments instantly.
+![Docker Architecture](docker.png)
 
 ## 4.3 Scaling Up with Kubernetes
 Docker is fantastic for managing individual application containers. However, if you are running a massive modern platform with hundreds of containers spread across multiple cloud servers, managing them manually becomes impossible.
