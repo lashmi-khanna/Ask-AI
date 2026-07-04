@@ -4,6 +4,14 @@ title: Machine Learning 1
 nav_order: 5
 ---
 
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
@@ -169,9 +177,10 @@ In more complex models like neural networks, the cost function landscape might h
 The gradient descent algorithm iteratively updates its parameters until it reaches convergence—the point where the parameters stop changing because the cost function has reached its absolute minimum. The algorithm relies on the following mathematical update rules:
 
 $$w = w - \alpha \frac{\partial}{\partial w} J(w,b)$$
+
 $$b = b - \alpha \frac{\partial}{\partial b} J(w,b)$$
 
-*   **$\alpha$ (Alpha):** This is the **learning rate**. It is a small positive number (such as $0.01$) that determines the size of the "step" the algorithm takes downhill.
+*   **$\alpha$ (Alpha):** This is the **learning rate**. It is a small positive number (such as 0.01) that determines the size of the "step" the algorithm takes downhill.
 *   **$\frac{\partial}{\partial w} J(w,b)$ and $\frac{\partial}{\partial b} J(w,b)$:** These are the **partial derivatives** (or slopes) of the cost function at the current point. They act as a compass, dictating the *direction* of the step.
 
 ### The Simultaneous Update Requirement
@@ -195,6 +204,7 @@ As the algorithm gets closer to the minimum, the slope naturally becomes flatter
 When the gradient descent algorithm is combined with the Squared Error Cost Function used in linear regression, the partial derivatives are mathematically derived as follows:
 
 $$\frac{\partial}{\partial w} J(w,b) = \frac{1}{m} \sum_{i=1}^{m} \left( f_{w,b}(x^{(i)}) - y^{(i)} \right) x^{(i)}$$
+
 $$\frac{\partial}{\partial b} J(w,b) = \frac{1}{m} \sum_{i=1}^{m} \left( f_{w,b}(x^{(i)}) - y^{(i)} \right)$$
 
 ### Batch Gradient Descent
