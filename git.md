@@ -6,7 +6,7 @@ nav_order: 4
 
 # Section 1: The Foundation (Operating Systems & Saving Your Work)
 
-## 1.1 Why Everyone Uses Linux
+## 1.1 Why Everyone Uses Linux 
 Think of an operating system like the engine of a car. While most everyday users are accustomed to consumer operating systems, software engineers and cloud platforms overwhelmingly choose Linux to run their applications.
 
 * **You’re in Total Control:** Linux is completely open-source. This means developers can look under the hood, modify any part of the core operating system, and fine-tune it to match their exact security and performance needs.
