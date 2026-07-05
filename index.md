@@ -12,7 +12,7 @@ nav_order: 1
   .mentor-card {
     border: 1px solid #e1e4e8;
     border-left: 5px solid #28a745;
-    border-radius: 6px;
+    border-radius: 6px; 
     padding: 20px;
     background-color: #fafbfc;
     margin-bottom: 40px;
