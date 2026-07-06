@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Upload, Parsing & Chunking
+title: Upload, Parsing and Chunking
 nav_order: 6
 ---
 
