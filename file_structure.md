@@ -37,7 +37,7 @@ The frontend (React/Next.js) provides the user interface and communicates with t
 #### 2. `django_backend/`
 Django manages all business logic and database-related operations.
 
-![Django Backend Structure](django_backend.png)
+![Django Backend Structure](file_str2.png)
 
 * **Why Django?** Django is ideal for:
   * Authentication
@@ -50,7 +50,7 @@ Django manages all business logic and database-related operations.
 #### 3. `fastapi_service/`
 FastAPI acts as the **AI engine** of the application and handles all AI-related operations.
 
-![FastAPI Service Structure](fastapi_service.png)
+![FastAPI Service Structure](file_str3.png)
 
 * **FastAPI Responsibilities:**
   * AI Chatbot APIs
@@ -65,7 +65,7 @@ FastAPI acts as the **AI engine** of the application and handles all AI-related 
 #### 4. `shared/`
 Contains reusable modules used by both Django and FastAPI.
 
-![Shared Module Structure](shared_module.png)
+![Shared Module Structure](file_str4.png)
 
 #### 5. `docker-compose.yml`
 Docker Compose orchestrates all project services (Frontend, Django, FastAPI, PostgreSQL, ChromaDB) and allows the complete application to be started with a single command:
@@ -77,11 +77,7 @@ This ensures a consistent development and deployment environment.
 #### 6. `README.md`
 Provides project documentation, including: Project overview, Installation steps, Folder structure, Environment variables, API usage, and Running instructions.
 
-<br>
 
-## Request Flow
-
-![Request Flow Diagram](request_flow.png)
 
 <br>
 
@@ -122,4 +118,4 @@ This project uses a GitHub Actions workflow that runs automatically whenever cod
 
 <br>
 
-![CI/CD Pipeline Flowchart](ci_cd_flowchart.png)
+![CI/CD Pipeline Flowchart](file_str5.png)
